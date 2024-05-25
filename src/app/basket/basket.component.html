@@ -1,0 +1,66 @@
+
+
+<div class="container-fluid">
+    <div class="row">
+      @for(item of items; track $index){
+  
+       <div class="card" style="width: 20rem">
+        <!-- <img src="./UZi_eb8Fh94.webp" class="card-img-top" alt="..." /> -->
+        <div class="card-body">
+          <p class="card-text">
+            {{ item.title }}
+          </p>
+          <div style="width: 16rem">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                Размер
+                <span style="position: absolute; right: 0">
+                  {{ item?.size }}</span
+                >
+              </li>
+              <li class="list-group-item">
+                Описание товара: <br>
+                <span style="position: absolute; right: 0">
+                  {{ item?.description }}</span
+                >
+              </li>
+              <li class="list-group-item">
+                Пол
+                <span style="position: absolute; right: 0">
+                  {{ item?.sex }}</span
+                >
+              </li>
+  
+              <li class="list-group-item">
+                Цвет
+                <span style="position: absolute; right: 0">
+                  {{ item?.color }}</span
+                >
+              </li>
+  
+              <li class="list-group-item">
+               Количество на складе
+                <span style="position: absolute; right: 0">
+                  {{ item?.quantity_in_stock }}</span
+                >
+              </li>
+  
+              <li class="list-group-item">
+                Цена
+                <span style="position: absolute; right: 0">
+                  {{ item?.price }}р.</span
+                >
+  
+                 
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div> 
+  
+      } 
+    </div>
+  </div>
+
+<button class="btn btn-primary ms-2 " type="button" (click)="goBack()">go back</button>
+<button class="btn btn-warning m-2" type="button" (click)="clearCart()">clear</button>

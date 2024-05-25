@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg p-0">
+  @for (type of types; track $index) {
+
+  <li class="col m-1">
+    <div class="dropdown">
+      <button
+        class="btn btn-light dropdown-toggle border border-end-2"
+        type="button"
+        id="dropdownMenuButton"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        {{ type.type }}
+        <!-- {{ type.id }} -->
+      </button>
+
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        @for (category of categories; track $index){ @if
+        (category.type_id===type.id ) {
+
+        <li class="dropdown-item" routerLink="productSite" (click)="getSubId(category.id)">
+          {{ category.category }}
+        </li>
+        } }
+      </ul>
+    </div>
+  </li>
+  }
+</nav>

@@ -1,0 +1,20 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+app-header, app-footer {
+    display: block;
+    background-color: cadetblue;
+}
+
+
+
+app-header{
+    height: 150px;
+    width: 100%;
+    text-align: center;
+}

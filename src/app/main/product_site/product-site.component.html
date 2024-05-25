@@ -1,0 +1,71 @@
+<p>product-site works!</p>
+
+<div class="container-fluid">
+  <div class="row">
+    @for(product of products; track $index){
+      @if ( product.category_id === subToolType) { 
+
+    <div class="card" style="width: 20rem">
+      <!--  <img src="./UZi_eb8Fh94.webp" class="card-img-top" alt="..." /> -->
+      <div class="card-body">
+        <p class="card-text">
+          {{ product.title }}
+        </p>
+        <div style="width: 16rem">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              Размер
+              <span style="position: absolute; right: 0">
+                {{ product?.size }}</span
+              >
+            </li>
+            <li class="list-group-item">
+              Описание товара: <br>
+              <span style="position: absolute; right: 0">
+                {{ product?.description }}</span
+              >
+            </li>
+            <li class="list-group-item">
+              Пол
+              <span style="position: absolute; right: 0">
+                {{ product?.sex }}</span
+              >
+            </li>
+
+            <li class="list-group-item">
+              Цвет
+              <span style="position: absolute; right: 0">
+                {{ product?.color }}</span
+              >
+            </li>
+
+            <li class="list-group-item">
+             Количество на складе
+              <span style="position: absolute; right: 0">
+                {{ product?.quantity_in_stock }}</span
+              >
+            </li>
+
+            <li class="list-group-item">
+              Цена
+              <span style="position: absolute; right: 0">
+                {{ product?.price }}р.</span
+              >
+
+                 <div class="btn btn-primary" (click)="addToCart(product)">В корзину</div> 
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    }
+    } 
+  </div>
+</div>
+
+<button type="button" (click)="goBack()">go back</button>
+
+<!-- <button>
+  <a routerLink="product">Product</a>
+</button> -->

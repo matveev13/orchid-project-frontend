@@ -1,0 +1,84 @@
+
+    
+[
+    {
+          "id": 1,
+          "created_at": "2024-05-19T18:50:29.000000Z",
+          "updated_at": "2024-05-19T18:50:29.000000Z",
+          "category_id": 1,
+          "sex": "М",
+          "color": "Чёрный",
+          "size": 43,
+          "price": 4200,
+          "title": "Ботинки зимние",
+          "description": "Ботинки высокие на меху",
+          "quantity_in_stock": 4
+      },
+      {
+          "id": 3,
+          "created_at": "2024-05-20T18:51:53.000000Z",
+          "updated_at": "2024-05-20T18:51:53.000000Z",
+          "category_id": 4,
+          "sex": "М",
+          "color": "Коричневый",
+          "size": 39,
+          "price": 2233,
+          "title": "Полуботинки летние",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "quantity_in_stock": 5
+      },
+      {
+          "id": 4,
+          "created_at": "2024-05-20T18:52:33.000000Z",
+          "updated_at": "2024-05-20T18:52:33.000000Z",
+          "category_id": 2,
+          "sex": "Ж",
+          "color": "Чёрный",
+          "size": 37,
+          "price": 1600,
+          "title": "Сапоги резиновые",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "quantity_in_stock": 3
+      },
+      {
+          "id": 5,
+          "created_at": "2024-05-20T18:53:39.000000Z",
+          "updated_at": "2024-05-20T18:53:39.000000Z",
+          "category_id": 6,
+          "sex": "Ж",
+          "color": "Жёлтый",
+          "size": 39,
+          "price": 2700,
+          "title": "Сандали на плоской подошве",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "quantity_in_stock": 8
+      },
+      {
+          "id": 6,
+          "created_at": "2024-05-20T18:55:57.000000Z",
+          "updated_at": "2024-05-20T18:55:57.000000Z",
+          "category_id": 1,
+          "sex": "М",
+          "color": "Коричневый",
+          "size": 45,
+          "price": 5200,
+          "title": "Ботинки высокие на шнуровке",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "quantity_in_stock": 4
+      },
+      {
+          "id": 7,
+          "created_at": "2024-05-20T18:56:39.000000Z",
+          "updated_at": "2024-05-20T18:56:39.000000Z",
+          "category_id": 5,
+          "sex": "М",
+          "color": "Белый",
+          "size": 41,
+          "price": 4500,
+          "title": "Туфли",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "quantity_in_stock": 2
+      }
+    ]
+ 
+    

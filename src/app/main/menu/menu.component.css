@@ -1,0 +1,13 @@
+
+.dropdown:hover .dropdown-menu{
+  display: block;
+}
+
+li {
+    list-style-type: none;
+}
+
+.dropdown button{
+  width: 100%;
+  height: 50px;
+}
