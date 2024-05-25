@@ -32,13 +32,12 @@ build-prod: ## Собрать контейнер, как backend так и front
 
 .PHONY: build-prod-frontend-npm
 build-prod-frontend-npm: ## Собрать npm файлы для App
-	@docker pull node:22
-	@if [[ ! -f './.env' ]]; then cp ./.build/prod.env ./.env; fi
+	@docker pull angular/ngcontainer
 	@docker run --rm $$(if [ ! -n "${CI}" ]; then echo " -it" ; fi) \
 		--name kweek-node \
 		--volume ${PWD}:/app:rw \
 		-w /app \
-		node:22 bash -c "npm run build; chown ${DOCKER_UID}:${DOCKER_GID} -R ."
+		angular/ngcontainer bash -c "npm run build; chown ${DOCKER_UID}:${DOCKER_GID} -R ."
 
 .PHONY: start-prod
 start-prod: ## Запустить прод реализацию контейнеров
