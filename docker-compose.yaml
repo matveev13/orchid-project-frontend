@@ -4,11 +4,8 @@ services:
   webserver:
     image: orchid-project-frontend-webserver
     container_name: orchid-project-frontend-webserver
-    build:
-      context: ./
-      dockerfile: .build/docker/node_nginx/Dockerfile.prod
-#    volumes:
+    volumes:
 #      #    монтируется конфиг nginx для приложения
-#      - .build/docker/node_nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
+      - ./public:/app/public
     ports:
       - "8081:80"
