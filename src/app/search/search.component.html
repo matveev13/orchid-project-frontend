@@ -1,0 +1,32 @@
+<div class="content row m-2" role="main">
+  <div class="card col col-4">
+    <div class="form-group">
+      <label for="search-text">Поиск</label>
+      <input
+        type="email"
+        class="form-control"
+        id="search-text"
+        aria-describedby="search-text"
+        [(ngModel)]="searchText"
+        placeholder="Введите запрос"
+        autofocus
+      />
+    </div>
+
+    <ul class="list-group list-group-flush">
+      <!-- results of ngFor is passed to appFilter with argument searchText -->
+      <li
+        class="list-group-item"
+        *ngFor="let c of searchData | appFilter : searchText"
+      >
+        <div routerLink="product" (click)="getProductId(c.id)" >
+          {{ c.title }}
+          <br />
+          {{ c.color }}
+          <br />
+          {{ c.description }}
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

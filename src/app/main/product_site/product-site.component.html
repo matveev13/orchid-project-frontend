@@ -1,12 +1,11 @@
-<p>product-site works!</p>
 
-<div class="container-fluid">
+
+<div class="container-fluid m-1">
   <div class="row">
-    @for(product of products; track $index){
-      @if ( product.category_id === subToolType) { 
+    @for(product of products; track $index){ @if ( product.category_id ===
+    subProductType) {
 
-    <div class="card" style="width: 20rem">
-      <!--  <img src="./UZi_eb8Fh94.webp" class="card-img-top" alt="..." /> -->
+    <div class="card m-1" style="width: 20rem">
       <div class="card-body">
         <p class="card-text">
           {{ product.title }}
@@ -17,12 +16,6 @@
               Размер
               <span style="position: absolute; right: 0">
                 {{ product?.size }}</span
-              >
-            </li>
-            <li class="list-group-item">
-              Описание товара: <br>
-              <span style="position: absolute; right: 0">
-                {{ product?.description }}</span
               >
             </li>
             <li class="list-group-item">
@@ -40,7 +33,14 @@
             </li>
 
             <li class="list-group-item">
-             Количество на складе
+              Описание товара: <br />
+              <div style="position: absolute, height=60px; right: 0" >
+                {{ product?.description }}
+            </div>
+            </li>
+
+            <li class="list-group-item">
+              Количество на складе
               <span style="position: absolute; right: 0">
                 {{ product?.quantity_in_stock }}</span
               >
@@ -50,21 +50,21 @@
               Цена
               <span style="position: absolute; right: 0">
                 {{ product?.price }}р.</span
-              >
-
-                 <div class="btn btn-primary" (click)="addToCart(product)">В корзину</div> 
+              >           
             </li>
+            <div class="btn btn-primary" (click)="addToCart(product)">
+              В корзину
+            </div>
           </ul>
         </div>
       </div>
     </div>
 
-    }
-    } 
+    } }
   </div>
 </div>
 
-<button type="button" (click)="goBack()">go back</button>
+<button type="button" class="btn btn-secondary m-2" (click)="goBack()">go back</button>
 
 <!-- <button>
   <a routerLink="product">Product</a>

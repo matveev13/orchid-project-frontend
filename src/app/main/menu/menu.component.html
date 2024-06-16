@@ -15,7 +15,9 @@
       </button>
 
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        @for (category of categories; track $index){ @if
+        @for (category of categories; track $index)
+        {
+           @if
         (category.type_id===type.id ) {
 
         <li class="dropdown-item" routerLink="productSite" (click)="getSubId(category.id)">

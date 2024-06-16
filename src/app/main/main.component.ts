@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
@@ -7,12 +7,21 @@ import { ProductSiteComponent } from './product_site/product-site.component';
 import { FilterComponent } from './filter/filter.component';
 import { GallaryComponent } from './gallary/gallary.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+import { NgFor } from '@angular/common';
+import { SearchComponent } from '../search/search.component';
+
+
 /* import { InMemoryDataService } from '../services/in-memory-data.service'; */
+
+
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  providers: [HttpClient, HttpClientModule],
+  providers: [HttpClient, HttpClientModule,  NgFor, 
+  
+  ],
   imports: [
     RouterLink,
     RouterOutlet,
@@ -22,18 +31,23 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     FilterComponent,
     GallaryComponent,
     FormsModule,
+    NgFor ,
+    SearchComponent
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
 })
+
+
 export class MainComponent {
- /*  items: string[] = [];
-  name: string = ''; */
-  constructor() {}
-  addItem(name: string) {
-    /*   this.toolDataService.addData(name); */
+  
+
+ 
+ 
+
+  constructor() {
+
   }
-  ngOnInit() {
-    /* this.items = this.toolDataService.getProduct(); */
-  }
+
+  
 }

@@ -3,11 +3,7 @@ import { Injectable } from '@angular/core';
 import { Product } from '../product';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Type } from '../type';
-import { Category } from '../category';
 import { environment } from '../../environment/environment';
-//import { ShoesDataType } from '../shoesDataType';
-//import { SubType } from '../SubToolType';
 
 @Injectable({
   providedIn: 'root',
@@ -35,8 +31,7 @@ export class ShoesDataService {
             item.title,
             item.description,
             item.quantity_in_stock
-          );
-          
+          );  
         });
       })
     );   

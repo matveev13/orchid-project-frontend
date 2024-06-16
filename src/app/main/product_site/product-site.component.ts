@@ -11,33 +11,32 @@ import { SubToolIdService } from '../../services/sub-tool-id.service';
 import { BusketService } from '../../services/busket-service.service';
 import { Category } from '../../category';
 import { Type } from '../../type';
-
+import { ProductComponent } from '../../product/product.component';
 
 @Component({
   selector: 'app-product-site',
   standalone: true,
-  providers: [ShoesDataService, MenuComponent, MenuService, ],
-  imports: [HttpClientModule],
+  providers: [ShoesDataService, MenuComponent, MenuService],
+  imports: [HttpClientModule, ProductComponent],
   templateUrl: './product-site.component.html',
   styleUrl: './product-site.component.css',
 })
 export class ProductSiteComponent implements OnInit {
   //ForBusket: boolean | undefined;
-  subToolType: number | undefined;
+  subProductType: number | undefined;
 
   products: Product[] = [];
-   categories: Category[] = [];
-   types: Type[] = [];
+  categories: Category[] = [];
+  types: Type[] = [];
 
   constructor(
     private route: ActivatedRoute,
     private menuService: MenuService,
     private location: Location,
     private shoesDataServise: ShoesDataService,
-   private readonly getSubId: SubToolIdService,
-   private busketService: BusketService
-
-  )  {}
+    private getSubId: SubToolIdService,
+    private busketService: BusketService,
+  ) {}
 
   ngOnInit(): void {
     this.shoesDataServise
@@ -48,27 +47,21 @@ export class ProductSiteComponent implements OnInit {
       .getCategory()
       .subscribe({ next: (data: Category[]) => (this.categories = data) });
 
- this.menuService
+    this.menuService
       .getType()
       .subscribe({ next: (data: Type[]) => (this.types = data) });
 
-
-
     this.getSubId.data$.subscribe((data) => {
-      this.subToolType = data;
+      this.subProductType = data;
     });
 
-     console.log(this.subToolType);
-     
+    console.log(this.subProductType);
   }
 
-  
-
-     addToCart(product: Product) {
+  addToCart(product: Product) {
     this.busketService.addToCart(product);
     console.log('addToCard');
-    
-  } 
+  }
 
   goBack(): void {
     this.location.back();
